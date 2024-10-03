@@ -5,6 +5,14 @@
   font-family: "Courier New", Courier, monospace;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .topbar {
   /* display: none; */
   .container {
@@ -14,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    margin-inline: auto;
 
     .logo {
       font-size: 2rem;
@@ -27,7 +36,6 @@
       color: white;
       border: none;
       i {
-        text-decoration: none;
         color: #fff;
       }
     }
@@ -35,44 +43,58 @@
     .menu {
       display: flex;
       justify-content: space-around;
-      list-style: none;
       height: 100%;
-      line-height: 70px;
 
-      li {
+      li a{
         display: flex;
-        padding-left: 1rem;
-
-        a {
-          text-decoration: none;
-          color: #fff;
-        }
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        column-gap: .25rem;
+        color: white;
       }
 
-      .dropdown-menu {
+
+      .nav-link {
+        width: 120px;
         position: relative;
-        display: inline-block;
+        transition: background-color .3s;
 
         .dropdown-submenu {
           position: absolute;
-          background-color: red;
-          display: block;
-          /* flex-direction: column;
-          justify-content: center;
-          align-items: center; */
-          left: 0;
+          background-color: black;
+          right: 0;
+          opacity: 0;
+          pointer-events: none;
 
-          li {
-            list-style: none;
-            width: 100%;
-
-            a {
-              width: 100%;
-              /* background-color: aqua; */
-            }
+          li a {
+            width: 130px;
+            padding: 1rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            column-gap: .5rem;
+            transition: background-color .3s;
+            font-size: .8rem;
           }
         }
       }
+    }
+
+
+    .dropdown-submenu li a:hover, .nav-link:hover {
+      background-color: #333333;
+    }
+
+    .dropdown-submenu.active {
+      opacity: 1;
+      pointer-events: initial;
+      transition: top .3s, opacity .3s;
+    }
+
+    .dropdown-submenu:hover {
+      display: block;
+      transform: translateY(0);
     }
 
     @media (max-width: 600px) {
@@ -92,6 +114,8 @@
     }
   }
 }
+
+
 
 .sidebar {
   /* display: none; */
