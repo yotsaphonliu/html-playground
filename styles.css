@@ -45,21 +45,20 @@ a {
       justify-content: space-around;
       height: 100%;
 
-      li span{
+      li span {
         display: flex;
         align-items: center;
         height: 100%;
         justify-content: center;
-        column-gap: .25rem;
+        column-gap: 0.25rem;
         color: white;
       }
-
 
       .nav-link {
         width: auto;
         padding: 0 2rem;
         position: relative;
-        transition: background-color .3s;
+        transition: background-color 0.3s;
 
         .dropdown-submenu {
           position: absolute;
@@ -67,7 +66,7 @@ a {
           right: 0;
           opacity: 0;
           pointer-events: none;
-          transform: translateY(.5rem);
+          transform: translateY(0.5rem);
 
           li a {
             width: 130px;
@@ -76,10 +75,9 @@ a {
             display: flex;
             align-items: center;
             justify-content: right;
-            column-gap: .5rem;
-            transition: background-color .3s;
-            font-size: .8rem;
-
+            column-gap: 0.5rem;
+            transition: background-color 0.3s;
+            font-size: 0.8rem;
           }
 
           li:not(:last-child) {
@@ -91,15 +89,13 @@ a {
           opacity: 1;
           pointer-events: initial;
           transform: translateY(0);
-          transition: transform .5s, opacity .3s;
+          transition: transform 0.5s, opacity 0.3s;
         }
-
-
       }
     }
 
-
-    .dropdown-submenu li a:hover, .nav-link:hover {
+    .dropdown-submenu li a:hover,
+    .nav-link:hover {
       background-color: #333333;
     }
 
@@ -120,8 +116,6 @@ a {
     }
   }
 }
-
-
 
 .sidebar {
   /* display: none; */
@@ -193,5 +187,39 @@ a {
   .container {
     display: block;
     transform: translateX(0); /* Slide in */
+  }
+}
+
+.flex-container {
+  padding: 20px;
+  height: 500px;
+  background-color: coral;
+  display: flex;
+
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    margin: 10px;
+  }
+
+  div:nth-child(1) {
+    order: 2;
+    flex-grow: 0;
+  }
+
+  div:nth-child(2) {
+    order: 1;
+    flex-grow: 0;
+  }
+
+  div:nth-child(3) {
+    order: 4;
+    flex-grow: 0;
+  }
+
+  div:nth-child(4) {
+    order: 3;
+    flex-grow: 1;
   }
 }
