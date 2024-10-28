@@ -195,35 +195,42 @@ a {
   height: 500px;
   background-color: coral;
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 
+    flex-direction
+    flex-wrap
+    flex-flow
+    justify-content
+    align-items
+    align-content
+  */
+
+  /* X asis
+    justify-content:
+  
+  */
+
+  /* Y asis
+    align-items:
+    align-content for wrapping
+  
+  */
 
   div {
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 300px;
+    padding: 20px;
     background-color: #fff;
-    margin: 10px;
-  }
 
-  div:nth-child(1) {
-    order: 2;
-    flex-grow: 0;
-    flex-shrink: 1;
-  }
-
-  div:nth-child(2) {
-    order: 1;
-    flex-grow: 0;
-    flex-shrink: 1;
-  }
-
-  div:nth-child(3) {
-    order: 4;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-
-  div:nth-child(4) {
-    order: 3;
-    flex-grow: 1;
-    flex-shrink: 1;
+    /* 
+      order
+      flex-grow
+      flex-shrink
+      flex-basis
+      flex (short hand)
+      align-self
+    */
   }
 }
