@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    background-color: dodgerblue;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*column-gap: 20px;*/
+    /*row-gap: 20px;*/
+    gap: 10px 5px;
+}
+
+.grid-items {
+    background-color: azure;
+    padding: 20px;
+}
