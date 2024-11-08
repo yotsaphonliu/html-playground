@@ -1,5 +1,6 @@
 :root {
   --blue: #00b2ff;
+  --banner-white-blue: #7bd7ff;
   --white: #fff;
   --black: #000;
 }
@@ -47,6 +48,57 @@ nav {
           text-decoration: none;
           font-size: 16px;
         }
+      }
+    }
+  }
+}
+
+.banner {
+  height: 500px;
+  background-color: var(--banner-white-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .banner-info {
+    width: 500px;
+    height: 180px;
+    color: var(--white);
+
+    text-align: center;
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.content {
+  padding: 20px;
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    .content-grid-item {
+      .content-grid-item-img {
+        height: 300px;
+        width: 570px;
+        background-color: var(--banner-white-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+          color: var(--white);
+          font-size: 40px;
+        }
+      }
+
+      .content-grid-item-text {
+        margin-top: 20px;
       }
     }
   }
