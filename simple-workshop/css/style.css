@@ -103,3 +103,52 @@ nav {
     }
   }
 }
+
+.clients {
+  background-color: var(--banner-white-blue);
+  height: auto;
+  padding: 20px;
+
+  .clients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    .clients-img {
+      height: 370px;
+      width: 370px;
+      background-color: var(--white);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+.cta {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cta-text {
+    width: 570px;
+    p {
+      text-align: center;
+    }
+  }
+}
+
+footer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--blue);
+}
