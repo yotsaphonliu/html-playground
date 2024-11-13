@@ -126,6 +126,15 @@ nav {
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        transition: 0.3s;
+
+        border: 1px solid var(--black);
+
+        &:hover {
+          background-color: var(--white);
+          color: var(--black);
+          border: 1px solid var(--black);
+        }
       }
     }
 
@@ -243,6 +252,11 @@ nav {
           width: 320px;
           height: 200px;
           object-fit: cover;
+          transition: 0.3s;
+
+          &:hover {
+            scale: 1.1;
+          }
         }
 
         @media only screen and (max-width: 412px) {
@@ -273,6 +287,15 @@ nav {
           text-decoration: none;
           padding: 10px;
           margin-top: 20px;
+          transition: 0.3s;
+
+          border: 1px solid var(--black);
+
+          &:hover {
+            background-color: var(--white);
+            color: var(--black);
+            border: 1px solid var(--black);
+          }
         }
       }
 
